@@ -4,7 +4,7 @@ self.__BUILD_MANIFEST = {
     "beforeFiles": [
       {
         "source": "/time-wall-1//_next/:path+",
-        "destination": "/time-wall-1/_next/:path+"
+        "destination": "/time-wall-1/next-assets/:path+"
       }
     ],
     "fallback": []
