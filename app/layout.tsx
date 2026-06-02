@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const isGithubPages = process.env.GITHUB_PAGES === "true";
+
 export const metadata: Metadata = {
   title: "Timewall",
   description: "A color-first time wall for low-friction daily reflection.",
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  manifest: "/manifest.webmanifest",
+  manifest: isGithubPages ? "/time-wall-1/manifest.webmanifest" : "/manifest.webmanifest",
 };
 
 export default function RootLayout({
